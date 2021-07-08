@@ -3,4 +3,18 @@
 body {
     margin: 0;
     padding: 0;
+    // color: white;
+}
+
+.red-background {
+    background-image: linear-gradient(to bottom right, red, rgb(224, 169, 169));
+}
+
+html, body {
+    height: 100%; 
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
