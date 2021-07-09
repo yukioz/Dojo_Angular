@@ -1,20 +1,14 @@
 .topbar {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    
 }
 
 .topbar .logo {
     max-height: 45px;
 }
 
-.topbar .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: blue;
-    border-radius: 5px;
-    height: 30px;
-    padding: 5px;
-    box-shadow: 2px 2px 2px black;
-    cursor: pointer;
+.topbar p{
+    margin: 0px;
 }
