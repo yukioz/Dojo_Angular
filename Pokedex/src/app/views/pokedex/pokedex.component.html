@@ -5,4 +5,8 @@
     <mat-card-subtitle>
         Lista de pokemons
     </mat-card-subtitle>
+    <mat-card-content class="container" *ngFor='let pokeData of pokemons    '>
+        <app-poke-card class="letra" data={{pokeData}}>
+        </app-poke-card>
+    </mat-card-content>
 </mat-card>

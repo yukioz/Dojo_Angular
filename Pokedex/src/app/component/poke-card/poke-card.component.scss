@@ -1,0 +1,33 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: lightblue;
+    border-radius: 10px;
+    margin: 10px;
+    height: 200px;
+    width: 250px;
+}
+
+.header {
+    width: 95%;
+    height: min-content;
+    margin: 2px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.image {
+    height: max-content;
+}
+
+.description {
+    width: 95%;
+    height: max-content;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    text-align: center;
+}

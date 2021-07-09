@@ -4,14 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { MaterialModule } from './material.module'
+import { MaterialModule } from './material.imports';
 
 // Prime and materials imports
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
-import {MenuModule} from 'primeng/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MenuModule } from 'primeng/menu';
 import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 
 // Componentss
@@ -22,6 +24,7 @@ import { HomeComponent } from './views/home/home.component';
 import { PokedexComponent } from './views/pokedex/pokedex.component';
 import { FavoritosComponent } from './views/favoritos/favoritos.component';
 import { JogoComponent } from './views/jogo/jogo.component';
+import { PokeCardComponent } from './component/poke-card/poke-card.component';
 // import { PokemonService } from './services/pokemon.service';
 
 
@@ -34,6 +37,7 @@ import { JogoComponent } from './views/jogo/jogo.component';
     PokedexComponent,
     FavoritosComponent,
     JogoComponent,
+    PokeCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +50,7 @@ import { JogoComponent } from './views/jogo/jogo.component';
     MatCardModule,
     MaterialModule,
     HttpClientModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

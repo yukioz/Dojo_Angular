@@ -1,4 +1,4 @@
-export class PokemonData {
+export class Pokemons {
     id?: number;
     num?: number;
     name?: string;
@@ -11,9 +11,9 @@ export class PokemonData {
     weaknesses?: string[];
 
     constructor() {
-        this.next_evolution  = [];
-        this.prev_evolution = [];
-        this.type = [];
+        // this.next_evolution  = [];
+        // this.prev_evolution = [];
+        // this.type = [];
     }
 }
 
