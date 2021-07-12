@@ -1,11 +1,20 @@
 <div class="card">
     <span class="header">
-        {{data}}
+       # {{data.num}} - {{data.name}}
     </span>
     <div class="image">
-
+        <img src={{data.img}}>
     </div>
-    <span class="description">
-        descrição
-    </span>
+    <div class="description">
+        <div class="fields" *ngFor="let type of data.type">
+            <span class="fields">
+                {{type}}
+            </span>
+        </div>
+        <div class="fields" *ngFor="let type of data.weaknesses">
+            <span class="fields">
+                {{type}}
+            </span>
+        </div>
+    </div>
 </div>

@@ -11,9 +11,7 @@ export class Pokemons {
     weaknesses?: string[];
 
     constructor() {
-        // this.next_evolution  = [];
-        // this.prev_evolution = [];
-        // this.type = [];
+
     }
 }
 

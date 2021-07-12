@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { PokemonService } from 'src/app/services/pokemon.service';
 import { Pokemons } from '../../models/pokemon.data';
 
@@ -10,8 +11,8 @@ import { Pokemons } from '../../models/pokemon.data';
 })
 export class PokedexComponent implements OnInit {
 
-  pokemons: any[] = [];
-  // pokeData: Pokemons[] = [];
+  pokemons: Pokemons[] = [];
+  pokeData: any[] = [];
 
   constructor(
     private pokeService: PokemonService,
@@ -19,10 +20,23 @@ export class PokedexComponent implements OnInit {
 
   ngOnInit(): void {
     this.pokeService.getPokemons().subscribe((response: any) => {
-      this.pokemons = response.pokemon;
-      console.log(this.pokemons, "Aki");
+      this.pokeData = response.pokemon;
 
-      console.log(this.pokemons[0].name, "rusbe");
+      this.pokeData.forEach((data) => {
+        let pokemon: Pokemons = {
+          id: data.id,
+          num: data.num,
+          name: data.name,
+          img: data.img,
+          type: data.type,
+          height: data.height,
+          weight: data.weight,
+          next_evolution: data.next_evolution,
+          prev_evolution: data.prev_evolution,
+          weaknesses: data.weaknesses,
+        }
+        this.pokemons.push(pokemon)
+      })
     })
   }
 

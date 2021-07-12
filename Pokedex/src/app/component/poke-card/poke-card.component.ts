@@ -9,21 +9,11 @@ import { Pokemons } from 'src/app/models/pokemon.data';
 export class PokeCardComponent implements OnInit {
 
   @Input()
-  data?: any;
-
-  name: string = this.data?.name;
-  image: string = '';
-  type: string[] = [];
+  data: Pokemons = new Pokemons();
 
   constructor() { }
 
   ngOnInit(): void {
-    
-    //this.name = this.data.name;
-    // this.image = this.data.img;
-    // this.type = this.data.type;
-
-    console.log(this.data);
 
   }
 

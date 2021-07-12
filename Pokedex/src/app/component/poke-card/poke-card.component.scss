@@ -25,9 +25,22 @@
 }
 
 .description {
+    display: flex;
+    flex-direction: column;
     width: 95%;
     height: max-content;
     background-color: whitesmoke;
     border-radius: 10px;
     text-align: center;
+}
+
+.fields {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    background-color: red;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    margin: 2px;
 }
