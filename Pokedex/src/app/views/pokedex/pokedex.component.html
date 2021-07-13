@@ -6,8 +6,8 @@
         Lista de pokemons
     </mat-card-subtitle>
     <mat-card-content class="container">
-        <div *ngFor="let a of pokemons">
-            <app-poke-card class="letra" [data]="a">
+        <div *ngFor="let pokemon of pokemons">
+            <app-poke-card class="letra" [data]="pokemon">
             </app-poke-card>
         </div>
     </mat-card-content>

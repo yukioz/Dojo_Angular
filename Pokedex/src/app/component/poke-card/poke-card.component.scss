@@ -4,10 +4,10 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
-    background-color: lightblue;
+    background-color: var(--color);
     border-radius: 10px;
     margin: 10px;
-    height: 200px;
+    height: 250px;
     width: 250px;
 }
 
@@ -37,8 +37,12 @@
 .fields {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+.tag {
     width: 40%;
-    background-color: red;
+    background-color: #C22E28;
     border-radius: 10px;
     justify-content: center;
     text-align: center;

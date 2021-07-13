@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" style="--color: {{color}}">
     <span class="header">
        # {{data.num}} - {{data.name}}
     </span>
@@ -6,13 +6,15 @@
         <img src={{data.img}}>
     </div>
     <div class="description">
-        <div class="fields" *ngFor="let type of data.type">
-            <span class="fields">
+        Type:
+        <div class="fields">
+            <span class="tag" *ngFor="let type of data.type">
                 {{type}}
             </span>
         </div>
-        <div class="fields" *ngFor="let type of data.weaknesses">
-            <span class="fields">
+        weaknesses:
+        <div class="fields">
+            <span class="tag" *ngFor="let type of data.weaknesses">
                 {{type}}
             </span>
         </div>

@@ -3,7 +3,7 @@ export class Pokemons {
     num?: number;
     name?: string;
     img?: string;
-    type?: String[];
+    type?: string[];
     height?: number;
     weight?: number;
     next_evolution?: evolutions[];

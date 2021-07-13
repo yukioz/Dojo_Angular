@@ -5,8 +5,14 @@
     overflow: auto;
     height: 70vh;
     scroll-behavior: smooth;
+    background-color: salmon;
+    border-radius: 5px;
 }
 
 .letra {
     color: black;
+}
+
+.layout {
+    background-color: lightslategrey;
 }
