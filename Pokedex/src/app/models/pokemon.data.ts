@@ -3,15 +3,17 @@ export class Pokemons {
     num?: number;
     name?: string;
     img?: string;
-    type?: string[];
+    type: string[];
     height?: number;
     weight?: number;
-    next_evolution?: evolutions[];
-    prev_evolution?: evolutions[];
+    next_evolution: evolutions[];
+    prev_evolution: evolutions[];
     weaknesses?: string[];
 
     constructor() {
-
+        this.type = [];
+        this.next_evolution = [];
+        this.prev_evolution = [];
     }
 }
 

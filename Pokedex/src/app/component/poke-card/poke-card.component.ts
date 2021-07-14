@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { Pokemons } from 'src/app/models/pokemon.data';
 import { colorType } from './colors';
 
@@ -8,44 +8,30 @@ import { colorType } from './colors';
   styleUrls: ['./poke-card.component.scss']
 })
 
-export class PokeCardComponent implements OnInit {
+export class PokeCardComponent implements OnInit, OnChanges {
   @Input()
   data: Pokemons = new Pokemons();
 
-  pokemon: Pokemons = this.data;
-
-  color: string = colorType["normal"];
+  color: string[] = [];
+  colorWeak: string[] = [];
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log("normal");
+  ngOnChanges (change: SimpleChanges): void {
+    let x: number = 0;
+    change.data.currentValue.type.forEach((tipo: string) => {
+      this.color[x] = colorType[tipo];
+      x++;
+    });
+    x=0;
+    change.data.currentValue.weaknesses.forEach((tipo: string) => {
+      this.colorWeak[x] = colorType[tipo];
+      x++;
+    });
   }
-  
-  teste(a: string) {
-    switch(a) {
-      case normal:
-        "#A8A77A",
-        break;
-      fire: "#EE8130",
-      water: "#6390F0",
-      electric: "#F7D02C",
-      grass: "#7AC74C",
-      ice: "#96D9D6",
-      fighting: "#C22E28",
-      poison: "#A33EA1",
-      ground: "#E2BF65",
-      flying: "#A98FF3",
-      psychic: "#F95587",
-      bug: "#A6B91A",
-      rock: "#B6A136",
-      ghost: "#735797",
-      dragon: "#6F35FC",
-      dark: "#705746",
-      steel: "#B7B7CE",
-      fairy: "#D685AD",
-    };
-    }
+
+  ngOnInit(): void {
+
   }
 
 }

@@ -1,4 +1,4 @@
-<div class="card" style="--color: {{color}}">
+<div class="card" style="--color: {{color[0]}}">
     <span class="header">
        # {{data.num}} - {{data.name}}
     </span>
@@ -8,13 +8,13 @@
     <div class="description">
         Type:
         <div class="fields">
-            <span class="tag" *ngFor="let type of data.type">
+            <span class="tag" *ngFor="let type of data.type; let i=index" style="--color: {{color[i]}}">
                 {{type}}
             </span>
         </div>
         weaknesses:
         <div class="fields">
-            <span class="tag" *ngFor="let type of data.weaknesses">
+            <span class="tag" *ngFor="let type of data.weaknesses; let i=index" style="--color: {{colorWeak[i]}}">
                 {{type}}
             </span>
         </div>
