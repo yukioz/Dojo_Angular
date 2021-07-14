@@ -12,6 +12,7 @@ export class PokeCardComponent implements OnInit, OnChanges {
   @Input()
   data: Pokemons = new Pokemons();
 
+  box: boolean = true;
   color: string[] = [];
   colorWeak: string[] = [];
 
@@ -28,10 +29,18 @@ export class PokeCardComponent implements OnInit, OnChanges {
       this.colorWeak[x] = colorType[tipo];
       x++;
     });
+    console.log(change);
   }
 
   ngOnInit(): void {
 
+  }
+
+  // Métodos
+
+  toggle(): void {
+    this.box = !this.box;
+    console.log(this.box);
   }
 
 }

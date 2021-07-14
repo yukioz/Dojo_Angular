@@ -5,7 +5,7 @@
     <div class="image">
         <img src={{data.img}}>
     </div>
-    <div class="description">
+    <div class="description" (click)="toggle()" *ngIf="box">
         Type:
         <div class="fields">
             <span class="tag" *ngFor="let type of data.type; let i=index" style="--color: {{color[i]}}">
@@ -16,6 +16,22 @@
         <div class="fields">
             <span class="tag" *ngFor="let type of data.weaknesses; let i=index" style="--color: {{colorWeak[i]}}">
                 {{type}}
+            </span>
+        </div>
+    </div>
+    <div class="description" (click)="toggle()" *ngIf="!box">
+        <span class="infoBox">
+            Peso: {{data.weight}}
+        </span>
+        <span class="infoBox">
+            altura: {{data.height}}
+        </span>
+        <div style="margin: 5px;">
+            <span class="prev infoBox">
+                -----
+            </span>
+            <span class="next infoBox">
+                -----
             </span>
         </div>
     </div>

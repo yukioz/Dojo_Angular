@@ -12,7 +12,9 @@ import { Pokemons } from '../../models/pokemon.data';
 export class PokedexComponent implements OnInit {
 
   pokemons: Pokemons[] = [];
+  filteredPokemons: Pokemons[] = [];
   pokeData: any[] = [];
+  search: string = "";
 
   constructor(
     private pokeService: PokemonService,

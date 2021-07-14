@@ -6,6 +6,9 @@
         Lista de pokemons
     </mat-card-subtitle>
     <mat-card-content class="container">
+        <mat-form-field appearance="fill" class="searchDiv">
+            <input matInput placeholder="Digite o nome do pokemon" value={{search}}>
+        </mat-form-field>
         <div *ngFor="let pokemon of pokemons">
             <app-poke-card class="letra" [data]="pokemon">
             </app-poke-card>

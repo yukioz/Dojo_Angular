@@ -5,7 +5,7 @@
     overflow: auto;
     height: 70vh;
     scroll-behavior: smooth;
-    background-color: salmon;
+    background-color: lightgrey;
     border-radius: 5px;
     justify-content: space-around;
 }
@@ -16,4 +16,13 @@
 
 .layout {
     background-color: lightslategrey;
+}
+
+.searchDiv {
+    width: 80%;
+    justify-content: center;
+    height: max-content;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
 }

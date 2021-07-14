@@ -17,7 +17,14 @@ export class Pokemons {
     }
 }
 
+
+
 class evolutions {
-    num?: number;
-    name?: string;
+    num: number;
+    name: string;
+
+    constructor() {
+        this.num = 0;
+        this.name = 'none';
+    }
 }

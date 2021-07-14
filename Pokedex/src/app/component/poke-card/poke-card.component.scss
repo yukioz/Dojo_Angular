@@ -33,6 +33,8 @@
     background-color: whitesmoke;
     border-radius: 10px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .fields {
@@ -49,4 +51,21 @@
     justify-content: center;
     text-align: center;
     margin: 2px;
+}
+.prev {
+    background-color: lightcoral;
+    border-radius: 5px 0px 0px 5px;
+    padding: 2px;
+}
+
+.next {
+    background-color: lightgreen;
+    border-radius: 0px 5px 5px 0px;
+    padding: 2px;
+}
+
+.infoBox {
+    border: 1px solid;
+    width: 100px;
+    padding: 1px;
 }
