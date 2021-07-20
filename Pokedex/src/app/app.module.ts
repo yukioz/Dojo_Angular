@@ -25,6 +25,7 @@ import { PokedexComponent } from './views/pokedex/pokedex.component';
 import { FavoritosComponent } from './views/favoritos/favoritos.component';
 import { JogoComponent } from './views/jogo/jogo.component';
 import { PokeCardComponent } from './component/poke-card/poke-card.component';
+import { ReactiveFormsModule } from '@angular/forms';
 // import { PokemonService } from './services/pokemon.service';
 
 
@@ -51,6 +52,7 @@ import { PokeCardComponent } from './component/poke-card/poke-card.component';
     MaterialModule,
     HttpClientModule,
     MatSnackBarModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

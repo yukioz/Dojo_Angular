@@ -29,7 +29,7 @@ export class PokeCardComponent implements OnInit, OnChanges {
       this.colorWeak[x] = colorType[tipo];
       x++;
     });
-    console.log(change);
+    // console.log(change);
   }
 
   ngOnInit(): void {
